@@ -34,7 +34,7 @@ function playGame() {
     let humanScore = 0
     let computerScore = 0
 
-    for (let i = 0; i <= 5; i++) {
+    for (let i = 0; i < 5; i++) {
         function playRound() {
             let humanChoice = getHumanChoice()
             let computerChoice = getComputerChoice()
@@ -65,9 +65,15 @@ function playGame() {
                 return "tie"
             }
         }
+        console.log("human score: " + humanScore)
+        console.log("computer score: " + computerScore)
+        console.log(playRound())
     }
+
+    console.log("final human score: " + humanScore)
+    console.log("final computer score: " + computerScore)
+    
+
 }
 
-console.log(playRound())
-console.log("human score: " + humanScore)
-console.log("computer score: " + computerScore)
+playGame()
